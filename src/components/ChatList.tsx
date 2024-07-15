@@ -3,30 +3,7 @@ import style from './chatlist.module.css';
 import { getAllChats, getChatMessages } from '../services/apis/api';
 import { useContext } from 'react';
 import { ChatIdContext } from '../context/ChatIdContext';
-
-interface Creator {
-  id: number;
-  name: string;
-  email: string;
-  phone: string;
-  city: string;
-  country: Country;
-}
-
-interface Country {
-  id: number;
-  name: string;
-  code: string;
-  phone_code: string;
-}
-
-interface Chat {
-  id: number;
-  name: string;
-  creator: Creator;
-  msg_count:number;
-  trimmedMessage?: string; // Add trimmedMessage field to Chat interface
-}
+import { Chat } from '../types/IChatList';
 
 const ChatList: React.FC = React.memo(() => {
   const [chats, setChats] = useState<Chat[]>([]);

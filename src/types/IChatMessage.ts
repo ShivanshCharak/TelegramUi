@@ -1,4 +1,4 @@
-import { Chat } from "./IChatList";
+
 
 interface Sender {
     id: number;

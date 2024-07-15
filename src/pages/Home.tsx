@@ -65,7 +65,7 @@ const Home: React.FC = () => {
             <li><i className="fa-solid fa-box-archive"></i> Archived Chats</li>
             <li><i className="fa-regular fa-user"></i> Contacts</li>
             <li><i className="fa-solid fa-cog"></i> Settings</li>
-            <li><i class="fa-solid fa-moon"></i> Light Mode</li>
+            <li><i className="fa-solid fa-moon"></i> Light Mode</li>
             <li><i className="fa-solid fa-cog"></i> Animation</li>
             <li><i className="fa-solid fa-bug"></i> Report Bug</li>
             <li><i className="fa-solid fa-question"></i>Telegram features</li>
