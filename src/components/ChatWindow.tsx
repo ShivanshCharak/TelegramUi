@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useContext } from "react";
+import React, { RefObject,useEffect, useState, useRef, useContext } from "react";
 import style from "./chatwindow.module.css";
 import { getChatMessages } from "../services/apis/api";
 import { ChatWindowProps, Message } from "../types/IChatMessage";
@@ -7,9 +7,11 @@ import { ChatMessageContext } from "../context/ChatMessageContext";
 const ChatWindow: React.FC<ChatWindowProps> = ({ chatId }) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [username, setUsername] = useState("");
-  const { chatMessages, setChatMessages } = useContext(ChatMessageContext);
+  const {setChatMessages } = useContext(ChatMessageContext);
   const messageRefs = useRef<Map<number, HTMLDivElement | null>>(new Map()); // Map to store refs for each message
-  const unreadMessageRef = useRef<HTMLSpanElement>();
+  
+const unreadMessageRef: RefObject<HTMLSpanElement> = useRef(null);
+
   const [dropdownActive, setDropdownActive] = useState(false);
 
   useEffect(() => {

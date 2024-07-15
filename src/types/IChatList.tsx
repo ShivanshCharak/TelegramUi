@@ -17,5 +17,7 @@ export interface Creator{
     id: number;
     name: string;
     creator:Creator
+    trimmedMessage:string,
+    msg_count:number
   }
   
