@@ -32,10 +32,20 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ chatId }) => {
   const scrollToPinnedMessage = () => {
     const pinnedMessageId = messages[0]?.id;
     if (pinnedMessageId && messageRefs.current.get(pinnedMessageId)) {
-      messageRefs.current.get(pinnedMessageId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      messageRefs.current.get(pinnedMessageId)?.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
-
+  useEffect(() => {
+    setChatMessages(messages)
+    console.log(messages)
+    const uniqueSenders = Array.from(new Set(messages.map((message) => message.sender.name)));
+    if (uniqueSenders.length > 0) {
+      setUsername(uniqueSenders[0]);
+    }
+  }, [messages]);
+  useEffect(()=>{
+    unreadMessageRef.current?.scrollIntoView({behavior:"smooth",block:'center'})
+  })
   const handleDropdownToggle = () => {
     setDropdownActive(!dropdownActive);
   };

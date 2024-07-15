@@ -218,28 +218,4 @@
     margin-left: 30px;
     color: #5e5e5e;
   }
-  /* home.module.css */
-
-/* Light Mode */
-.mainPage {
-  font-family: 'Roboto', sans-serif;
-  background-color: #ffffff; /* Light background */
-  color: #333333; /* Dark text color */
-  transition: background-color 0.3s ease;
-}
-
-.contacts {
-  background-color: #f0f0f0; /* Lighter background for contacts section */
-}
-
-/* Dark Mode */
-.darkMode {
-  background-color: #181818; /* Dark background */
-  color: #ffffff; /* Light text color */
-}
-
-.darkMode .contacts {
-  background-color: #212121; /* Darker background for contacts section in dark mode */
-}
-
-/* Other styles for dark mode elements */
+  
