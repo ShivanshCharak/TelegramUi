@@ -1,0 +1,86 @@
+.chatDiv{
+    width: 410px;
+    height: 72px;
+    color: white;
+    display: flex;
+    font-size: large;
+    padding:7px;
+}
+
+.chatDiv:hover{
+    background-color:#ffffff0f;
+    cursor: pointer;
+    border-radius: 10px;
+} 
+.chatListContainer{
+    padding:10px;
+    max-width: 420px;
+    max-height: inherit;
+}
+.creatorTimeContainer{
+    width :80%;
+    display: flex;
+    justify-content: space-between;
+}
+.avatar{
+    width:50px;
+    margin-right: 10px;
+    height:50px;
+    background-color: #8774e1;
+    border-radius:50%;
+}
+.time{
+    color:#8e8e8e;
+    font-size: 0.7rem;
+
+}
+.nameMessageContainer{
+    display: flex;
+    justify-content:space-between;
+    font-weight: 600;
+}
+.creatorTimeContainer{
+    display: flex;
+    flex-direction: column;
+}
+.lastMessage{
+   margin-left: 9px;
+   font-size: 16px;
+   color: #9e9e9e;
+    width: 321px;
+    font-weight: 500;
+    height: 49px;
+}
+.messageCountContainer{
+    display: flex;
+}
+.messageCountContainer > .count{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    font-size: 0.8rem;
+    height:25px;
+    background-color: #707579;
+    color: white;
+    border-radius: 50%;
+}
+.active{
+    background-color: #8774e1;
+    color: white;
+    border-radius: 10px;    
+}
+
+.active >.avatar{
+    background-color: black;
+}
+.active >.creatorTimeContainer>.messageCountContainer>.lastMessage{
+    color:white;
+}
+.active >.creatorTimeContainer>.messageCountContainer>.count{
+    background-color: white;
+    color: #8774e1;
+}
+.active >.creatorTimeContainer>.nameMessageContainer>.time{
+    color: white;
+}

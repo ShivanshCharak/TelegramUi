@@ -1,0 +1,223 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.topbar {
+  width: 69%;
+  height: 46px;
+  background-color: #212121;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  cursor: pointer;
+ 
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #8673e0;
+  border-radius: 50%;
+}
+
+.rightContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.avatarUserInfoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  margin-left: 20px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.message {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  word-wrap: break-word;
+  color: #ffffff;
+}
+
+.messageContainer {
+  display: flex;
+  justify-content: center; /* Center align messages */
+  margin: 10px;
+}
+.messageContainer >.unReadMessages{
+  display: flex;
+  justify-content: center; /* Center align messages */
+  margin: 10px;
+  
+}
+.beyondChat .message {
+  background-color: purple;
+}
+
+.otherSender .message {
+  background-color: black;
+}
+
+.beyondChat {
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+
+.otherSender {
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+
+.messageArea {
+  margin-top: 66px; /* Ensure messages start below the fixed topbar */
+  padding: 20px;
+  width: 100%;
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  border-radius: 10%;
+  bottom: 0px;
+  width: 50%;
+  padding: 10px 20px;
+  background-color: #212121;
+}
+.userInfo{
+  color: #aaaaaa;
+  display: flex;
+  flex-direction: column;
+}
+.userInfo > .lastSeen{
+  margin-left: 20px;
+}
+.pinnedMessage{
+  width: 200px;
+  max-height: 50px;
+  position: absolute;
+  top: 10px;
+  right: 200px;
+  color: white;
+  border-left: 2px solid #8673e0;
+
+ 
+
+}
+.pinnedMessage > .heading{
+  margin-left: 5px;
+  color: #8673e0;
+}
+.pinnedMessage > .message{
+  margin-top: -7px;
+  margin-left: 5px;
+  
+}
+.inputBox > input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background-color: #212121;
+  color: white;
+  margin-left: 10px;
+}
+
+.inputBox > input:focus {
+  outline: none;
+}
+
+
+.unReadMessages {
+
+  background-color: #212121;
+  height: 24px;
+  cursor: pointer;
+ text-align: center;
+ width: 100%;
+  color: #8673e0;
+  /* color: white; */
+  padding: 10px 10px;
+  border-radius: 10px;
+
+}
+
+.chatMessages {
+  width: 75%;
+  display: flex;
+  justify-content: center; /* Center align entire chat messages */
+  margin-left: 10%;
+  overflow: hidden;
+}
+.mic >i{
+  
+  width: 50px;
+  height: 50px;
+  background-color: #8774e1;
+  position: fixed;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+/* .mic>i{
+ justify-content: center;
+ align-items: center;
+ align-items: ;
+
+} */
+ .options{
+  width: 50px;
+  height: 50px;
+  align-content: center;
+ }
+.optionsDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  
+  background-color: #212121;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+  
+}
+
+.optionsDropdown.active {
+  display: block;
+}
+
+.optionItem {
+  padding: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 12px; /* Increased padding on hover */
+
+  font-weight: 600;
+}
+
+.optionItem:hover {
+  background-color: rgba(89, 87, 87, 0.2); /* Transparent black */
+}
+.optionItem>i{
+  margin-right: 10px
+
+}
+.delete{
+
+  color: rgba(231, 7, 7, 0.887);
+}

@@ -1,0 +1,245 @@
+/* home.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+  }
+  
+  main {
+    font-weight: 500;
+    background-color: #181818;
+  }
+  
+  .Edit {
+    position: absolute;
+    bottom: 20px;
+    left: 420px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: #8774e1;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .Edit:hover {
+    background-color: #6352ba;
+  }
+  
+  .Edit > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .Edit.active > i {
+    transform: rotate(45deg);
+  }
+  
+  .mainPage {
+    display: grid;
+    width: 1800px;
+    grid-template-columns: repeat(2, 1.8fr 2fr);
+    height: 100vh;
+    margin: 10px auto;
+    overflow:hidden;
+  }
+  
+  .chatSection {
+    background-image: url('../assets/1f135a074a169f90e5.jpeg');
+    width: 290%;
+    overflow: scroll;
+  }
+  
+  .topbar {
+    border-bottom: 1px solid #0f0f0f;
+  }
+  
+  .contacts {
+    background-color: #212121;
+    border: 1px solid #0f0f0f;
+  }
+  
+  .inputContainer {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  i {
+    color: #aaaaaa;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .inputContainer>input {
+    width: 334px;
+    padding: 15px;
+    border: none;
+    display: flex;
+    background-color: #181818;
+    border-radius: 20px;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  .options {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .options > a {
+    color: #aaaaaa;
+    margin-bottom: 10px;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+  
+  .options > a {
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.3s;
+  }
+  
+  .options > a:hover {
+    cursor: pointer;
+    color: #8774e1;
+  }
+  
+  .underline {
+    position: absolute;
+    height: 2px;
+    background: #8774e1;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    transition: left 0.3s ease, width 0.3s ease;
+  }
+  
+  html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+  }
+  
+  .popOver {
+    background-color: #0f0f0f;
+    position: absolute;
+    width: 200px;
+    font-size: 16px;
+    top: -150px;
+    right: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    /* opacity: 0; */
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .popOver.active {
+    opacity: 10000;
+    transform: scale(1);
+  }
+  
+  ul > li {
+    list-style: none;
+    padding: 10px;
+  }
+  
+  ul > li > i {
+    margin-right: 10px;
+    color: #ffffff;
+  }
+  
+  ul > li:hover {
+    cursor: pointer;
+    background-color: #282828;
+    border-radius: 5px;
+  }
+  
+  .menuButton {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    padding: 20px;
+  }
+  
+  .menuButton:hover {
+    background-color: #282828;
+    border-radius: 50%;
+}
+
+.menuButton.active {
+    
+    /* background-color: #333333; */
+    transform: scale(1.1);
+}
+
+.menuDropdown {
+    background-color: #0f0f0f;
+    position: absolute;
+    width: 250px;
+    font-size: 16px;
+    top: 60px;
+    left: 70px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .menuDropdown.active {
+    opacity: 100;
+    transform: scale(1);
+  }
+  .teleVersion{
+    margin-left: 30px;
+    color: #5e5e5e;
+  }
+  /* home.module.css */
+
+/* Light Mode */
+.mainPage {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff; /* Light background */
+  color: #333333; /* Dark text color */
+  transition: background-color 0.3s ease;
+}
+
+.contacts {
+  background-color: #f0f0f0; /* Lighter background for contacts section */
+}
+
+/* Dark Mode */
+.darkMode {
+  background-color: #181818; /* Dark background */
+  color: #ffffff; /* Light text color */
+}
+
+.darkMode .contacts {
+  background-color: #212121; /* Darker background for contacts section in dark mode */
+}
+
+/* Other styles for dark mode elements */
